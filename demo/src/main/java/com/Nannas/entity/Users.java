@@ -15,12 +15,16 @@ public class Users {
 	
 	@Column(name="password")
 	private String password;
+
+	@Column(name="first_name")
+	private String firstName;
 	
 
-	public Users(String userName, String password) {
+	public Users(String userName, String password, String firstName) {
 		super();
 		this.userName = userName;
 		this.password = password;
+		this.firstName = firstName;
 	}
 
 	public Users() {
@@ -43,6 +47,10 @@ public class Users {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public String getFirstName() { return firstName; }
+
+	public void setFirstName(String firstName) { this.firstName = firstName; }
 	
 	
 
